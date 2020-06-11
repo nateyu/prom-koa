@@ -1,0 +1,46 @@
+{
+  "name": "prom-koa",
+  "version": "0.1.6",
+  "description": "test metrics",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --detectOpenHandles",
+    "test-cov": "jest --coverage --runInBand --forceExit --detectOpenHandles",
+    "lint": "standard ."
+  },
+  "files": [
+    "metrics/",
+    "helpers/",
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "gc-stats": "^1.4.0",
+    "koa": "^2.7.0",
+    "prom-client": "^11.5.1",
+    "prometheus-gc-stats": "^0.6.2"
+  },
+  "devDependencies": {
+    "jest": "^23.6.0",
+    "lolex": "^3.0.0",
+    "power-assert": "^1.6.1",
+    "standard": "^12.0.1",
+    "supertest": "^3.4.2"
+  },
+  "jest": {
+    "testMatch": [
+      "**/test/**/*.test.js"
+    ],
+    "clearMocks": true,
+    "coverageReporters": [
+      "text-summary",
+      "lcov"
+    ],
+    "testEnvironment": "node"
+  }
+}
